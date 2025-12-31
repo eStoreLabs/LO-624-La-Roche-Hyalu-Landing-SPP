@@ -1,9 +1,7 @@
 @charset "UTF-8";
 
-// set up variables
-
-$text-main: "font-name", sans-serif;
-$text-secondary: "font-name", sans-serif;
+$text-main: "Montserrat", sans-serif;
+$text-heading: "Locator Black", sans-serif;
 
 $fw-regular: 400;
 $fw-bold: 700;
@@ -17,10 +15,22 @@ $px-L: 24px;
 $px-XL: 32px;
 $px-XXL: 40px;
 
-$color-main: #0d1116;
-$color-bg: #f6f8fa;
-$color-accent: #f6a255;
-$color-accent-2: #69a7dd;
+$color-main: #0a4d67;
+$color-bg: #ffffff;
+$color-accent: #228cbc;
+$color-accent-2: #00adee;
+
+$gradient-1: linear-gradient(
+  180deg,
+  rgba(34, 140, 188, 1) 0%,
+  rgba(158, 216, 235, 1) 100%
+);
+$gradient-2: linear-gradient(
+  159deg,
+  rgba(231, 241, 244, 1) 0%,
+  rgba(202, 227, 235, 1) 50%,
+  rgba(171, 212, 224, 1) 100%
+);
 
 $media-breakpoint-sm: 576px;
 $media-breakpoint-md: 768px;
@@ -34,7 +44,7 @@ $media-breakpoint-xl: 1200px;
   line-height: 1.2;
   color: $color-main;
   background-color: $color-bg;
-  max-width: 990px; //adjust, based on https://github.com/eStoreLabs/READ-ME/blob/main/DEVELOPMENT_GUIDELINES_FOR_GENERICS.md#2-styles
+  max-width: 1300px;
   margin: auto;
 
   ::selection {
@@ -62,50 +72,51 @@ $media-breakpoint-xl: 1200px;
     display: block;
   }
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   .es-section-title {
-    font-family: $text-secondary;
+    font-family: $text-heading;
     font-size: $fs-header;
     font-weight: $fw-bold;
     text-align: center;
     margin-block: $px-M;
   }
 
-  .es-kv {
-    background-color: $color-bg;
-    &__img {
-      &--desktop {
-        display: none;
-      }
-      @media (min-width: $media-breakpoint-md) {
-        &--mobile {
-          display: none;
-        }
-        &--desktop {
-          display: block;
-        }
-      }
-    }
-  }
-
   .es-section {
-    margin-block: $px-M;
+    padding: $px-M;
+    background: $gradient-2;
+  }
 
-    &__button {
-      background-color: $color-accent;
-      padding: $px-S $px-M;
-      cursor: pointer;
-      margin: auto;
-
-      @media (min-width: $media-breakpoint-md) {
-        background-color: $color-accent-2;
+  .es-kv {
+    background: $gradient-1;
+    padding: $px-M $px-M 0 $px-M;
+    &__logo-img {
+      width: 50%;
+      max-width: 200px;
+      margin-right: 0;
+    }
+    &__title,
+    &__subtitle {
+      font-family: $text-heading;
+      color: $color-bg;
+      text-align: right;
+      text-transform: uppercase;
+    }
+    &__packs {
+      &-wrapper {
+        overflow: hidden;
+      }
+      &-img {
+        max-width: 400px;
+        margin-bottom: -16px;
       }
     }
   }
-
-  // other sections
 
   // Swiper styles, reset some of the inherent ones
-
   .es-slider {
     .swiper-button-prev:after,
     .swiper-rtl .swiper-button-next:after,

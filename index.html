@@ -4,8 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template RC</title>
-    <!-- TODO: link google fonts here -->
+    <title>La Roche Posay Zimowe S.O.S dla skóry</title>
+    <!-- Local font imports -->
+    <style>
+        @font-face {
+            font-family: 'Locator Black';
+            src: url('./fonts/Locator_Black.woff2') format('woff2'),
+                url('./fonts/Locator_Black.woff') format('woff');
+            font-weight: 900;
+            font-style: normal;
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
@@ -14,16 +28,19 @@
     <div id="es-rc">
         <div id="es-rc-content">
             <div class="es-kv">
-                <p class="es-section-title">KV Section title</p>
-                <img class="es-kv__img--mobile" src="./images/example-mobile.png" alt="placeholder mobile">
-                <img class="es-kv__img--desktop" src="./images/example-dekstop.png" alt="placeholder desktop">
+                <div class="es-kv__logo-wrapper">
+                    <img src="./images/logo-la-roche-posay-white.png" alt="La Roche Posay Logo" class="es-kv__logo-img">
+                </div>
+                <div class="es-kv__headline-wrapper">
+                    <p class="es-kv__title">Zimowe S.O.S dla skóry</p>
+                    <p class="es-kv__subtitle">Odkryj nawilżenie do zadań specjalnych</p>
+                    <a class="es-kv__CTA" href="#">Sprawdź</a>
+                </div>
+                <div class="es-kv__packs-wrapper">
+                    <img class="es-kv__packs-img" src="./images/kv-packs.png" alt="La Roche Posay Hyalu Zestawy">
+                </div>
             </div>
-            <div class="es-section">
-                <p class="es-section-title">Section title</p>
-                <button class="es-section__button">Click</button>
-            </div>
-            <div class="es-slider es-section">
-                <p class="es-section-title">Slider</p>
+            <div class="es-slider">
                 <!-- Slider main container -->
                 <div class="swiper es-swiper">
                     <!-- Additional required wrapper -->
@@ -32,6 +49,8 @@
                         <div class="swiper-slide es-slide">Slide 1</div>
                         <div class="swiper-slide es-slide">Slide 2</div>
                         <div class="swiper-slide es-slide">Slide 3</div>
+                        <div class="swiper-slide es-slide">Slide 4</div>
+                        <div class="swiper-slide es-slide">Slide 5</div>
                     </div>
 
                     <!-- If we need navigation buttons -->
@@ -50,9 +69,127 @@
                     <div class="es-swiper-scrollbar"></div>
                 </div>
             </div>
+            <div class="es-section">
+                <div>
+                    <img src="./images/hyalu-b5-serum.png" alt="La Roche Posay Hyalu B5 Suractivated Serum">
+                </div>
+                <div>
+                    <p class="es-section__title">Hyalu B5 suractivated serum</p>
+                    <p class="es-section__subtitle">Skoncentrowane serym regenerująco-ujędrniające</p>
+                    <ul>
+                        <li>Zapewnia efekt wypełnienia i&nbsp;koryguje zmarszczki.</li>
+                        <li>Skóra jest intensywnie nawilżona i&nbsp;;widocznie gładsza.</li>
+                        <li>INNOWACJA: Nowa technologia łącząca 4&nbsp;silne formy kwasu hialuronowego.</li>
+                        <li>Odpowiednie do każdego typu skóry wrażliwej.</li>
+                    </ul>
+
+                    <a class="es-section__CTA" href="#1">Kup teraz</a>
+                </div>
+
+            </div>
+            <div class="es-grid">
+                <div class="es-section">
+                    <div>
+                        <img src="./images/hyalu-b5-serum.png" alt="La Roche Posay Hyalu B5 Suractivated Serum">
+                    </div>
+                    <div>
+                        <p class="es-section__title">Hyalu B5</p>
+                        <p class="es-section__subtitle">Krem ujędrniająco-naprawczy do twarzy</p>
+                        <ul>
+                            <li>Widocznie wypełnia skórę</li>
+                            <li>Intensywnie nawilża</li>
+                            <li>Regeneruje i wzmacja barierę skórną</li>
+                        </ul>
+
+                        <a class="es-section__CTA" href="#2">Kup teraz</a>
+                    </div>
+
+                </div>
+                <div class="es-section">
+                    <div>
+                        <img src="./images/hyalu-b5-serum.png" alt="La Roche Posay Hyalu B5 Suractivated Serum">
+                    </div>
+                    <div>
+                        <p class="es-section__title">Hyalu B5</p>
+                        <p class="es-section__subtitle">Krem ujędrniająco-naprawczy do twarzy opakowanie uzupełniające
+                            REFILL</p>
+                        <ul>
+                            <li>Widocznie wypełnia skórę</li>
+                            <li>Pomaga korygować pierwsze oznaki starzenia</li>
+                        </ul>
+
+                        <a class="es-section__CTA" href="#3">Kup teraz</a>
+                    </div>
+
+                </div>
+                <div class="es-section">
+                    <div>
+                        <img src="./images/hyalu-b5-serum.png" alt="La Roche Posay Hyalu B5 Suractivated Serum">
+                    </div>
+                    <div>
+                        <p class="es-section__title">Hyalu B5</p>
+                        <p class="es-section__subtitle">Hydro-Żel do twarzy</p>
+                        <ul>
+                            <li>24-godzinne nawilżenie</li>
+                            <li>Matowy efekt na skórze przez cały dzień</li>
+                            <li>Widocznie zmniejsza pory</li>
+                            <li>Wygładza drobne linie</li>
+                        </ul>
+
+                        <a class="es-section__CTA" href="#4">Kup teraz</a>
+                    </div>
+
+                </div>
+                <div class="es-section">
+                    <div>
+                        <img src="./images/hyalu-b5-serum.png" alt="La Roche Posay Hyalu B5 Suractivated Serum">
+                    </div>
+                    <div>
+                        <p class="es-section__title">Toleriane sensitive</p>
+                        <p class="es-section__subtitle">Prebiotyczny krem nawilżający</p>
+                        <ul>
+                            <li>Łagodzi uczucie ściągnięcia, pieczenia i kłucia</li>
+                            <li>Odpowiedni dla każdego rodzaju skóry wrażliwej</li>
+                        </ul>
+
+                        <a class="es-section__CTA" href="#5">Kup teraz</a>
+                    </div>
+                </div>
+                <div class="es-section">
+                    <div>
+                        <img src="./images/hyalu-b5-serum.png" alt="La Roche Posay Hyalu B5 Suractivated Serum">
+                    </div>
+                    <div>
+                        <p class="es-section__title">Cicaplast Baume B5+</p>
+                        <p class="es-section__subtitle">Silnie regenerujący balsam kojący</p>
+                        <ul>
+                            <li>Regeneruje i koi skórę</li>
+                            <li>Nawilża i łagodzi podrażnienia</li>
+                        </ul>
+
+                        <a class="es-section__CTA" href="#6">Kup teraz</a>
+                    </div>
+
+                </div>
+                <div class="es-section">
+                    <div>
+                        <img src="./images/hyalu-b5-serum.png" alt="La Roche Posay Hyalu B5 Suractivated Serum">
+                    </div>
+                    <div>
+                        <p class="es-section__title">Lipikar Baume AP+M</p>
+                        <p class="es-section__subtitle">Balsam regenerujący do ciała</p>
+                        <ul>
+                            <li>Przeciw podrażnieniom i swędzeniu skóry</li>
+                            <li>Od pierwszych dni życia</li>
+                        </ul>
+
+                        <a class="es-section__CTA" href="#7">Kup teraz</a>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
-    <script src="./scripts/click.js"></script>
     <script src="./scripts/swiper-bundle.min.js"></script>
     <script src="./scripts/swiperInit.js"></script>
 </body>

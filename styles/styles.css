@@ -1,19 +1,19 @@
 #es-rc #es-rc-content {
-  font-family: "font-name", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
-  color: #0d1116;
-  background-color: #f6f8fa;
-  max-width: 990px;
+  color: #0a4d67;
+  background-color: #ffffff;
+  max-width: 1300px;
   margin: auto;
 }
 #es-rc #es-rc-content ::-moz-selection {
-  background-color: #69a7dd;
+  background-color: #00adee;
   color: #fff;
 }
 #es-rc #es-rc-content ::selection {
-  background-color: #69a7dd;
+  background-color: #00adee;
   color: #fff;
 }
 #es-rc #es-rc-content * {
@@ -30,40 +30,42 @@
 #es-rc #es-rc-content button {
   display: block;
 }
+#es-rc #es-rc-content a {
+  text-decoration: none;
+  color: inherit;
+}
 #es-rc #es-rc-content .es-section-title {
-  font-family: "font-name", sans-serif;
+  font-family: "Locator Black", sans-serif;
   font-size: 32px;
   font-weight: 700;
   text-align: center;
   margin-block: 16px;
 }
-#es-rc #es-rc-content .es-kv {
-  background-color: #f6f8fa;
-}
-#es-rc #es-rc-content .es-kv__img--desktop {
-  display: none;
-}
-@media (min-width: 768px) {
-  #es-rc #es-rc-content .es-kv__img--mobile {
-    display: none;
-  }
-  #es-rc #es-rc-content .es-kv__img--desktop {
-    display: block;
-  }
-}
 #es-rc #es-rc-content .es-section {
-  margin-block: 16px;
+  padding: 16px;
+  background: linear-gradient(159deg, rgb(231, 241, 244) 0%, rgb(202, 227, 235) 50%, rgb(171, 212, 224) 100%);
 }
-#es-rc #es-rc-content .es-section__button {
-  background-color: #f6a255;
-  padding: 8px 16px;
-  cursor: pointer;
-  margin: auto;
+#es-rc #es-rc-content .es-kv {
+  background: linear-gradient(180deg, rgb(34, 140, 188) 0%, rgb(158, 216, 235) 100%);
+  padding: 16px 16px 0 16px;
 }
-@media (min-width: 768px) {
-  #es-rc #es-rc-content .es-section__button {
-    background-color: #69a7dd;
-  }
+#es-rc #es-rc-content .es-kv__logo-img {
+  width: 50%;
+  max-width: 200px;
+  margin-right: 0;
+}
+#es-rc #es-rc-content .es-kv__title, #es-rc #es-rc-content .es-kv__subtitle {
+  font-family: "Locator Black", sans-serif;
+  color: #ffffff;
+  text-align: right;
+  text-transform: uppercase;
+}
+#es-rc #es-rc-content .es-kv__packs-wrapper {
+  overflow: hidden;
+}
+#es-rc #es-rc-content .es-kv__packs-img {
+  max-width: 400px;
+  margin-bottom: -16px;
 }
 #es-rc #es-rc-content .es-slider .swiper-button-prev:after,
 #es-rc #es-rc-content .es-slider .swiper-rtl .swiper-button-next:after,
