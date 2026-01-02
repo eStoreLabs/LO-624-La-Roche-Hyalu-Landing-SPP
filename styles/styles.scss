@@ -8,10 +8,12 @@ $fw-bold: 700;
 $fw-black: 900;
 
 $fs-base: 18px;
+$fs-base-dk: 20px;
 $fs-title: 40px;
 $fs-title-dk: 42px;
-$fs-title-dk-large: 48px;
+$fs-title-dk-large: 52px;
 $fs-subtitle: 30px;
+$fs-subtitle-dk: 32px;
 $fs-header: 23px;
 $fs-header-dk: 20px;
 
@@ -37,6 +39,12 @@ $gradient-2: linear-gradient(
   rgba(231, 241, 244, 1) 0%,
   rgba(202, 227, 235, 1) 50%,
   rgba(171, 212, 224, 1) 100%
+);
+$gradient-2-rv: linear-gradient(
+  159deg,
+  rgba(171, 212, 224, 1) 0%,
+  rgba(202, 227, 235, 1) 50%,
+  rgba(231, 241, 244, 1) 100%
 );
 
 $transition: all 0.3s ease-in-out;
@@ -255,9 +263,10 @@ html {
         }
       }
     }
+    @container es-rc (min-width: 720px) {
+      padding: $px-M $px-M 0 $px-M;
+    }
     @container es-rc (min-width: 800px) {
-      padding-top: $px-M;
-
       &__headline-wrapper {
         gap: $px-S;
       }
@@ -372,8 +381,17 @@ html {
   }
 
   .es-section {
-    padding: $px-M $px-M 0 $px-M;
+    padding: $px-M;
     background: $gradient-2;
+    margin-block: $px-S;
+
+    .es-desktop {
+      display: none;
+    }
+    &__header {
+      z-index: 2;
+      position: relative;
+    }
     &__title {
       font-family: $text-heading;
       font-size: $fs-title;
@@ -388,12 +406,16 @@ html {
     &__subtitle {
       font-size: $fs-header;
       margin-bottom: $px-M;
+      text-wrap: balance;
     }
     &__list {
       margin-block: $px-L;
       ul {
         padding-inline-start: 20px;
         margin-block: 0;
+      }
+      li {
+        margin-block: $px-S;
       }
     }
     &__CTA {
@@ -447,7 +469,7 @@ html {
     @container es-rc (min-width: 450px) {
       &__description {
         display: flex;
-        align-items: end;
+        gap: $px-S;
       }
       &__list {
         width: 95%;
@@ -456,9 +478,76 @@ html {
         width: 100%;
       }
     }
+    @container es-rc (min-width: 450px) and (max-width: 550px) {
+      &__description {
+        align-items: end;
+      }
+    }
+    @container es-rc (min-width: 720px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: $px-L;
+      padding: $px-M;
+
+      .es-desktop {
+        display: block;
+      }
+      .es-mobile {
+        display: none;
+      }
+      &__desktop-wrapper {
+        width: 70%;
+      }
+      &__description {
+        display: block;
+      }
+      &__title {
+        text-wrap: balance;
+        &--span {
+          display: inline;
+          font-size: unset;
+        }
+      }
+      &__packshot {
+        width: 40%;
+        max-width: 300px;
+        align-self: center;
+      }
+      &__picture {
+        margin: unset;
+      }
+    }
+    @container es-rc (min-width: 980px) {
+      padding: $px-L;
+      gap: $px-L;
+      &__packshot {
+        max-width: 250px;
+      }
+      &__picture {
+        max-width: 200px;
+        margin: auto;
+      }
+    }
+    @container es-rc (min-width: 1100px) {
+      font-size: $fs-base-dk;
+      &__title {
+        font-size: $fs-title-dk-large;
+      }
+      &__subtitle {
+        font-size: $fs-subtitle-dk;
+      }
+    }
+  }
+
+  .es-grid .es-section {
+    @container es-rc (min-width: 720px) {
+      background: $gradient-2-rv;
+    }
   }
 
   .es-hyalu-serum {
+    padding-bottom: 0;
     .es-snowflake {
       position: absolute;
       z-index: 0;
@@ -496,6 +585,79 @@ html {
         &--3 {
           width: 60px;
           left: -20%;
+        }
+      }
+    }
+    @container es-rc (min-width: 720px) {
+      position: relative;
+      .es-section__packshot {
+        position: static;
+      }
+      .es-snowflake {
+        &--1 {
+          top: 30%;
+          left: 18%;
+          width: 90px;
+        }
+        &--2 {
+          top: unset;
+          left: unset;
+          right: 5%;
+          bottom: 6%;
+          width: 50px;
+        }
+        &--3 {
+          left: 0%;
+        }
+      }
+    }
+  }
+
+  .es-hyalu-krem {
+    .es-snowflake {
+      position: absolute;
+      z-index: 0;
+      &--1 {
+        width: 60px;
+        top: 26%;
+        left: 24%;
+        z-index: -1;
+        opacity: 0.5;
+        animation: snowflake-1 24s linear infinite;
+      }
+      &--2 {
+        width: 40px;
+        top: 59%;
+        right: 8%;
+        z-index: -1;
+        opacity: 0.4;
+        animation: snowflake-2 20s linear infinite reverse;
+      }
+    }
+    @container es-rc (min-width: 450px) {
+      .es-snowflake {
+        &--1 {
+          top: -19%;
+          left: 38%;
+        }
+      }
+    }
+    @container es-rc (min-width: 720px) {
+      position: relative;
+      .es-section__packshot {
+        position: static;
+      }
+      .es-snowflake {
+        &--1 {
+          width: 90px;
+          top: 18%;
+          left: 2%;
+        }
+        &--2 {
+          width: 60px;
+          top: 12%;
+          left: unset;
+          right: 7%;
         }
       }
     }
