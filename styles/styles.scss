@@ -92,19 +92,6 @@ html {
     color: inherit;
   }
 
-  .es-section-title {
-    font-family: $text-heading;
-    font-size: $fs-header;
-    font-weight: $fw-bold;
-    text-align: center;
-    margin-block: $px-M;
-  }
-
-  .es-section {
-    padding: $px-M;
-    background: $gradient-2;
-  }
-
   .es-kv {
     background: $gradient-1;
     padding: 0 $px-M;
@@ -380,6 +367,136 @@ html {
       }
       &--prev__img {
         transform: rotate(180deg);
+      }
+    }
+  }
+
+  .es-section {
+    padding: $px-M $px-M 0 $px-M;
+    background: $gradient-2;
+    &__title {
+      font-family: $text-heading;
+      font-size: $fs-title;
+      font-weight: $fw-black;
+      margin-bottom: $px-M;
+      text-transform: uppercase;
+      &--span {
+        font-size: $fs-subtitle;
+        display: block;
+      }
+    }
+    &__subtitle {
+      font-size: $fs-header;
+      margin-bottom: $px-M;
+    }
+    &__list {
+      margin-block: $px-L;
+      ul {
+        padding-inline-start: 20px;
+        margin-block: 0;
+      }
+    }
+    &__CTA {
+      display: inline-block;
+      margin-top: $px-M;
+      background-color: $color-main;
+      color: $color-bg;
+      font-family: $text-heading;
+      text-transform: uppercase;
+      padding: $px-XS $px-S;
+      font-size: calc(1.1 * $fs-base);
+      transition: $transition;
+      &:hover {
+        background-color: $color-bg;
+        color: $color-main;
+        outline: 1px solid $color-main;
+      }
+    }
+    &__picture {
+      display: block;
+      width: 80%;
+      margin-right: 0;
+      max-width: 250px;
+    }
+    &__packshot {
+      position: relative;
+      z-index: 1;
+    }
+    .es-snowflake {
+      position: absolute;
+      z-index: 0;
+      &--1 {
+        width: 80px;
+        z-index: -1;
+        opacity: 0.5;
+        animation: snowflake-1 24s linear infinite;
+      }
+      &--2 {
+        width: 70px;
+        z-index: -1;
+        opacity: 0.4;
+        animation: snowflake-2 20s linear infinite reverse;
+      }
+      &--3 {
+        width: 70px;
+        z-index: -1;
+        opacity: 0.6;
+        animation: snowflake-3 28s linear infinite;
+      }
+    }
+    @container es-rc (min-width: 450px) {
+      &__description {
+        display: flex;
+        align-items: end;
+      }
+      &__list {
+        width: 95%;
+      }
+      &__picture {
+        width: 100%;
+      }
+    }
+  }
+
+  .es-hyalu-serum {
+    .es-snowflake {
+      position: absolute;
+      z-index: 0;
+      &--1 {
+        width: 80px;
+        top: -9%;
+        left: 72%;
+        z-index: -1;
+        opacity: 0.5;
+        animation: snowflake-1 24s linear infinite;
+      }
+      &--2 {
+        width: 70px;
+        top: 41%;
+        right: 11%;
+        z-index: -1;
+        opacity: 0.4;
+        animation: snowflake-2 20s linear infinite reverse;
+      }
+      &--3 {
+        width: 70px;
+        bottom: 11%;
+        left: 28%;
+        z-index: -1;
+        opacity: 0.6;
+        animation: snowflake-3 28s linear infinite;
+      }
+    }
+    @container es-rc (min-width: 450px) {
+      .es-snowflake {
+        &--1 {
+          top: -19%;
+          left: 38%;
+        }
+        &--3 {
+          width: 60px;
+          left: -20%;
+        }
       }
     }
   }
