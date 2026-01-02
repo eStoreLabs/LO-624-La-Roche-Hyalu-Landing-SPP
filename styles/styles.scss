@@ -9,8 +9,11 @@ $fw-black: 900;
 
 $fs-base: 18px;
 $fs-title: 40px;
+$fs-title-dk: 42px;
+$fs-title-dk-large: 48px;
 $fs-subtitle: 30px;
 $fs-header: 23px;
+$fs-header-dk: 20px;
 
 $px-XS: 6px;
 $px-S: 8px;
@@ -57,6 +60,7 @@ html {
   background-color: $color-bg;
   max-width: 1300px;
   margin: auto;
+  container: es-rc / inline-size;
 
   ::selection {
     background-color: $color-accent-2;
@@ -133,6 +137,8 @@ html {
       font-size: $fs-header;
       background-color: $color-accent-2;
       padding: $px-S;
+      width: 80%;
+      max-width: max-content;
     }
     &__CTA {
       background-color: $color-bg;
@@ -203,24 +209,143 @@ html {
       z-index: 0;
       &--1 {
         width: 50px;
-        height: 50px;
         top: 3%;
         left: 2%;
         opacity: 0.5;
+        animation: snowflake-1 24s linear infinite;
       }
       &--2 {
         width: 40px;
-        height: 40px;
         top: 61%;
         right: 2%;
         opacity: 0.4;
+        animation: snowflake-2 20s linear infinite reverse;
       }
       &--3 {
         width: 80px;
-        height: 80px;
         bottom: 5%;
         left: 70%;
         opacity: 0.6;
+        animation: snowflake-3 28s linear infinite;
+      }
+      &--4 {
+        display: none;
+      }
+    }
+    @container es-rc (min-width: 450px) {
+      &__packs {
+        &__cialo {
+          top: 11%;
+          left: 39%;
+        }
+        &__twarz {
+          top: 36%;
+          left: 74%;
+        }
+      }
+      .es-snowflake {
+        &--1 {
+          top: 7%;
+          left: 8%;
+        }
+        &--2 {
+          right: 7%;
+        }
+        &--3 {
+          left: 64%;
+        }
+      }
+    }
+    @container es-rc (min-width: 600px) {
+      .es-snowflake {
+        &--4 {
+          display: block;
+          width: 30px;
+          top: 47%;
+          left: 49%;
+          opacity: 0.5;
+          animation: snowflake-1 22s linear infinite reverse;
+        }
+      }
+    }
+    @container es-rc (min-width: 800px) {
+      padding-top: $px-M;
+
+      &__headline-wrapper {
+        gap: $px-S;
+      }
+      &__title {
+        font-size: $fs-title-dk;
+      }
+      &__subtitle {
+        font-size: $fs-header-dk;
+      }
+      &__packs-wrapper {
+        margin-top: -195px;
+        max-width: 260px;
+      }
+      .es-snowflake {
+        &--1 {
+          top: 5%;
+          left: 28%;
+        }
+        &--2 {
+          top: 5%;
+          right: 58%;
+          width: 20px;
+        }
+        &--3 {
+          bottom: 14%;
+          left: 36%;
+          width: 40px;
+        }
+        &--4 {
+          top: 18%;
+          left: 1%;
+        }
+      }
+    }
+    @container es-rc (min-width: 980px) {
+      padding: $px-L $px-L 0 $px-L;
+      &__title {
+        font-size: $fs-title-dk-large;
+      }
+      .es-snowflake {
+        &--1 {
+          width: 60px;
+        }
+        &--2 {
+          width: 30px;
+        }
+        &--3 {
+          width: 45px;
+        }
+        &--4 {
+          width: 40px;
+        }
+      }
+    }
+    @container es-rc (min-width: 1100px) {
+      &__headline-wrapper {
+        gap: $px-M;
+      }
+      &__title {
+        font-size: 60px;
+      }
+      &__subtitle {
+        font-size: 24px;
+      }
+      &__CTA {
+        font-size: calc(1.2 * $fs-base);
+      }
+      &__packs-wrapper {
+        margin-top: -223px;
+        max-width: 320px;
+      }
+    }
+    @container es-rc (min-width: 1200px) {
+      &__packs-wrapper {
+        margin-top: -265px;
       }
     }
   }
@@ -266,6 +391,49 @@ html {
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
+    }
+  }
+
+  /* Animations */
+  @keyframes snowflake-1 {
+    0% {
+      transform: rotate(0deg);
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.7; // +0.2
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes snowflake-2 {
+    0% {
+      transform: rotate(0deg);
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.2; // -0.2
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 0.4;
+    }
+  }
+
+  @keyframes snowflake-3 {
+    0% {
+      transform: rotate(0deg);
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 0.8; // +0.2
+    }
+    100% {
+      transform: rotate(360deg);
+      opacity: 0.6;
     }
   }
 }

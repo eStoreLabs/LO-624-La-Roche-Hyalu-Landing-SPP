@@ -12,6 +12,8 @@ html {
   background-color: #ffffff;
   max-width: 1300px;
   margin: auto;
+  container: es-rc/inline-size;
+  /* Animations */
 }
 #es-rc #es-rc-content ::-moz-selection {
   background-color: #00adee;
@@ -82,6 +84,9 @@ html {
   font-size: 23px;
   background-color: #00adee;
   padding: 8px;
+  width: 80%;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 #es-rc #es-rc-content .es-kv__CTA {
   background-color: #ffffff;
@@ -151,24 +156,136 @@ html {
 }
 #es-rc #es-rc-content .es-kv .es-snowflake--1 {
   width: 50px;
-  height: 50px;
   top: 3%;
   left: 2%;
   opacity: 0.5;
+  animation: snowflake-1 24s linear infinite;
 }
 #es-rc #es-rc-content .es-kv .es-snowflake--2 {
   width: 40px;
-  height: 40px;
   top: 61%;
   right: 2%;
   opacity: 0.4;
+  animation: snowflake-2 20s linear infinite reverse;
 }
 #es-rc #es-rc-content .es-kv .es-snowflake--3 {
   width: 80px;
-  height: 80px;
   bottom: 5%;
   left: 70%;
   opacity: 0.6;
+  animation: snowflake-3 28s linear infinite;
+}
+#es-rc #es-rc-content .es-kv .es-snowflake--4 {
+  display: none;
+}
+@container es-rc (min-width: 450px) {
+  #es-rc #es-rc-content .es-kv__packs__cialo {
+    top: 11%;
+    left: 39%;
+  }
+  #es-rc #es-rc-content .es-kv__packs__twarz {
+    top: 36%;
+    left: 74%;
+  }
+  #es-rc #es-rc-content .es-kv .es-snowflake--1 {
+    top: 7%;
+    left: 8%;
+  }
+  #es-rc #es-rc-content .es-kv .es-snowflake--2 {
+    right: 7%;
+  }
+  #es-rc #es-rc-content .es-kv .es-snowflake--3 {
+    left: 64%;
+  }
+}
+@container es-rc (min-width: 600px) {
+  #es-rc #es-rc-content .es-kv .es-snowflake--4 {
+    display: block;
+    width: 30px;
+    top: 47%;
+    left: 49%;
+    opacity: 0.5;
+    animation: snowflake-1 22s linear infinite reverse;
+  }
+}
+@container es-rc (min-width: 800px) {
+  #es-rc #es-rc-content .es-kv {
+    padding-top: 16px;
+  }
+  #es-rc #es-rc-content .es-kv__headline-wrapper {
+    gap: 8px;
+  }
+  #es-rc #es-rc-content .es-kv__title {
+    font-size: 42px;
+  }
+  #es-rc #es-rc-content .es-kv__subtitle {
+    font-size: 20px;
+  }
+  #es-rc #es-rc-content .es-kv__packs-wrapper {
+    margin-top: -195px;
+    max-width: 260px;
+  }
+  #es-rc #es-rc-content .es-kv .es-snowflake--1 {
+    top: 5%;
+    left: 28%;
+  }
+  #es-rc #es-rc-content .es-kv .es-snowflake--2 {
+    top: 5%;
+    right: 58%;
+    width: 20px;
+  }
+  #es-rc #es-rc-content .es-kv .es-snowflake--3 {
+    bottom: 14%;
+    left: 36%;
+    width: 40px;
+  }
+  #es-rc #es-rc-content .es-kv .es-snowflake--4 {
+    top: 18%;
+    left: 1%;
+  }
+}
+@container es-rc (min-width: 980px) {
+  #es-rc #es-rc-content .es-kv {
+    padding: 24px 24px 0 24px;
+  }
+  #es-rc #es-rc-content .es-kv__title {
+    font-size: 48px;
+  }
+  #es-rc #es-rc-content .es-kv .es-snowflake--1 {
+    width: 60px;
+  }
+  #es-rc #es-rc-content .es-kv .es-snowflake--2 {
+    width: 30px;
+  }
+  #es-rc #es-rc-content .es-kv .es-snowflake--3 {
+    width: 45px;
+  }
+  #es-rc #es-rc-content .es-kv .es-snowflake--4 {
+    width: 40px;
+  }
+}
+@container es-rc (min-width: 1100px) {
+  #es-rc #es-rc-content .es-kv__headline-wrapper {
+    gap: 16px;
+  }
+  #es-rc #es-rc-content .es-kv__title {
+    font-size: 60px;
+  }
+  #es-rc #es-rc-content .es-kv__subtitle {
+    font-size: 24px;
+  }
+  #es-rc #es-rc-content .es-kv__CTA {
+    font-size: 21.6px;
+  }
+  #es-rc #es-rc-content .es-kv__packs-wrapper {
+    margin-top: -223px;
+    max-width: 320px;
+  }
+}
+@container es-rc (min-width: 1200px) {
+  #es-rc #es-rc-content .es-kv__packs-wrapper {
+    margin-top: -265px;
+  }
 }
 #es-rc #es-rc-content .es-slider .swiper-button-prev:after,
 #es-rc #es-rc-content .es-slider .swiper-rtl .swiper-button-next:after,
@@ -205,5 +322,44 @@ html {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+@keyframes snowflake-1 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.5;
+  }
+}
+@keyframes snowflake-2 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.4;
+  }
+}
+@keyframes snowflake-3 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.6;
   }
 }/*# sourceMappingURL=styles.css.map */
