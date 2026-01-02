@@ -1,9 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #es-rc #es-rc-content {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.2;
   color: #0a4d67;
+  background: #fff;
   background-color: #ffffff;
   max-width: 1300px;
   margin: auto;
@@ -36,7 +41,7 @@
 }
 #es-rc #es-rc-content .es-section-title {
   font-family: "Locator Black", sans-serif;
-  font-size: 32px;
+  font-size: 23px;
   font-weight: 700;
   text-align: center;
   margin-block: 16px;
@@ -47,7 +52,9 @@
 }
 #es-rc #es-rc-content .es-kv {
   background: linear-gradient(180deg, rgb(34, 140, 188) 0%, rgb(158, 216, 235) 100%);
-  padding: 16px 16px 0 16px;
+  padding: 0 16px;
+  overflow: hidden;
+  position: relative;
 }
 #es-rc #es-rc-content .es-kv__logo-img {
   width: 50%;
@@ -56,16 +63,112 @@
 }
 #es-rc #es-rc-content .es-kv__title, #es-rc #es-rc-content .es-kv__subtitle {
   font-family: "Locator Black", sans-serif;
+  font-weight: 900;
   color: #ffffff;
   text-align: right;
   text-transform: uppercase;
 }
+#es-rc #es-rc-content .es-kv__headline-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 16px;
+  margin-top: 24px;
+}
+#es-rc #es-rc-content .es-kv__title {
+  font-size: 40px;
+}
+#es-rc #es-rc-content .es-kv__subtitle {
+  font-size: 23px;
+  background-color: #00adee;
+  padding: 8px;
+}
+#es-rc #es-rc-content .es-kv__CTA {
+  background-color: #ffffff;
+  font-family: "Locator Black", sans-serif;
+  text-transform: uppercase;
+  padding: 6px 8px;
+  font-size: 19.8px;
+  transition: all 0.3s ease-in-out;
+}
+#es-rc #es-rc-content .es-kv__CTA:hover {
+  background-color: #0a4d67;
+  color: #ffffff;
+}
 #es-rc #es-rc-content .es-kv__packs-wrapper {
-  overflow: hidden;
+  margin-top: -40px;
+  width: 80%;
+  max-width: 300px;
+  position: relative;
+  z-index: 1;
 }
 #es-rc #es-rc-content .es-kv__packs-img {
   max-width: 400px;
-  margin-bottom: -16px;
+  margin-bottom: -20px;
+}
+#es-rc #es-rc-content .es-kv__packs-text {
+  font-family: "Locator Black", sans-serif;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 23px;
+  outline: 1px solid #ffffff;
+  padding: 2px 4px;
+}
+#es-rc #es-rc-content .es-kv__packs__cialo {
+  position: absolute;
+  top: 7%;
+  left: 36%;
+}
+#es-rc #es-rc-content .es-kv__packs__cialo::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 17px;
+  top: 100%;
+  left: -29%;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+#es-rc #es-rc-content .es-kv__packs__twarz {
+  position: absolute;
+  top: 34%;
+  left: 75%;
+}
+#es-rc #es-rc-content .es-kv__packs__twarz::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 17px;
+  top: 100%;
+  left: -29%;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+#es-rc #es-rc-content .es-kv .es-snowflake {
+  position: absolute;
+  z-index: 0;
+}
+#es-rc #es-rc-content .es-kv .es-snowflake--1 {
+  width: 50px;
+  height: 50px;
+  top: 3%;
+  left: 2%;
+  opacity: 0.5;
+}
+#es-rc #es-rc-content .es-kv .es-snowflake--2 {
+  width: 40px;
+  height: 40px;
+  top: 61%;
+  right: 2%;
+  opacity: 0.4;
+}
+#es-rc #es-rc-content .es-kv .es-snowflake--3 {
+  width: 80px;
+  height: 80px;
+  bottom: 5%;
+  left: 70%;
+  opacity: 0.6;
 }
 #es-rc #es-rc-content .es-slider .swiper-button-prev:after,
 #es-rc #es-rc-content .es-slider .swiper-rtl .swiper-button-next:after,

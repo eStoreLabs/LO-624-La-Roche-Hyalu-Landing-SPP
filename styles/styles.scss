@@ -5,10 +5,14 @@ $text-heading: "Locator Black", sans-serif;
 
 $fw-regular: 400;
 $fw-bold: 700;
+$fw-black: 900;
 
-$fs-base: 16px;
-$fs-header: 32px;
+$fs-base: 18px;
+$fs-title: 40px;
+$fs-subtitle: 30px;
+$fs-header: 23px;
 
+$px-XS: 6px;
 $px-S: 8px;
 $px-M: 16px;
 $px-L: 24px;
@@ -32,10 +36,16 @@ $gradient-2: linear-gradient(
   rgba(171, 212, 224, 1) 100%
 );
 
+$transition: all 0.3s ease-in-out;
+
 $media-breakpoint-sm: 576px;
 $media-breakpoint-md: 768px;
 $media-breakpoint-lg: 992px;
 $media-breakpoint-xl: 1200px;
+
+html {
+  scroll-behavior: smooth;
+}
 
 #es-rc #es-rc-content {
   font-family: $text-main;
@@ -43,6 +53,7 @@ $media-breakpoint-xl: 1200px;
   font-weight: $fw-regular;
   line-height: 1.2;
   color: $color-main;
+  background: #fff;
   background-color: $color-bg;
   max-width: 1300px;
   margin: auto;
@@ -92,7 +103,9 @@ $media-breakpoint-xl: 1200px;
 
   .es-kv {
     background: $gradient-1;
-    padding: $px-M $px-M 0 $px-M;
+    padding: 0 $px-M;
+    overflow: hidden;
+    position: relative;
     &__logo-img {
       width: 50%;
       max-width: 200px;
@@ -101,17 +114,113 @@ $media-breakpoint-xl: 1200px;
     &__title,
     &__subtitle {
       font-family: $text-heading;
+      font-weight: $fw-black;
       color: $color-bg;
       text-align: right;
       text-transform: uppercase;
     }
+    &__headline-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: $px-M;
+      margin-top: $px-L;
+    }
+    &__title {
+      font-size: $fs-title;
+    }
+    &__subtitle {
+      font-size: $fs-header;
+      background-color: $color-accent-2;
+      padding: $px-S;
+    }
+    &__CTA {
+      background-color: $color-bg;
+      font-family: $text-heading;
+      text-transform: uppercase;
+      padding: $px-XS $px-S;
+      font-size: calc(1.1 * $fs-base);
+      transition: $transition;
+      &:hover {
+        background-color: $color-main;
+        color: $color-bg;
+      }
+    }
     &__packs {
       &-wrapper {
-        overflow: hidden;
+        margin-top: -40px;
+        width: 80%;
+        max-width: 300px;
+        position: relative;
+        z-index: 1;
       }
       &-img {
         max-width: 400px;
-        margin-bottom: -16px;
+        margin-bottom: -20px;
+      }
+      &-text {
+        font-family: $text-heading;
+        font-weight: $fw-black;
+        color: $color-bg;
+        text-transform: uppercase;
+        font-size: $fs-header;
+        outline: 1px solid $color-bg;
+        padding: 2px 4px;
+      }
+      &__cialo {
+        position: absolute;
+        top: 7%;
+        left: 36%;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 80%;
+          height: 17px;
+          top: 100%;
+          left: -29%;
+          border-right: 1px solid $color-bg;
+          border-bottom: 1px solid $color-bg;
+        }
+      }
+      &__twarz {
+        position: absolute;
+        top: 34%;
+        left: 75%;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 80%;
+          height: 17px;
+          top: 100%;
+          left: -29%;
+          border-right: 1px solid $color-bg;
+          border-bottom: 1px solid $color-bg;
+        }
+      }
+    }
+    .es-snowflake {
+      position: absolute;
+      z-index: 0;
+      &--1 {
+        width: 50px;
+        height: 50px;
+        top: 3%;
+        left: 2%;
+        opacity: 0.5;
+      }
+      &--2 {
+        width: 40px;
+        height: 40px;
+        top: 61%;
+        right: 2%;
+        opacity: 0.4;
+      }
+      &--3 {
+        width: 80px;
+        height: 80px;
+        bottom: 5%;
+        left: 70%;
+        opacity: 0.6;
       }
     }
   }
