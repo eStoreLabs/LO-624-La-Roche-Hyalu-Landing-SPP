@@ -522,20 +522,11 @@ html {
       padding: $px-L;
       gap: $px-L;
       &__packshot {
-        max-width: 250px;
+        max-width: 200px;
       }
       &__picture {
         max-width: 200px;
         margin: auto;
-      }
-    }
-    @container es-rc (min-width: 1100px) {
-      font-size: $fs-base-dk;
-      &__title {
-        font-size: $fs-title-dk-large;
-      }
-      &__subtitle {
-        font-size: $fs-subtitle-dk;
       }
     }
   }
@@ -543,6 +534,17 @@ html {
   .es-grid .es-section {
     @container es-rc (min-width: 720px) {
       background: $gradient-2-rv;
+    }
+    @container es-rc (min-width: 880px) {
+      margin-block: unset;
+    }
+  }
+
+  .es-grid {
+    @container es-rc (min-width: 880px ) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
     }
   }
 
@@ -590,6 +592,7 @@ html {
     }
     @container es-rc (min-width: 720px) {
       position: relative;
+      justify-content: flex-start;
       .es-section__packshot {
         position: static;
       }
@@ -609,6 +612,15 @@ html {
         &--3 {
           left: 0%;
         }
+      }
+    }
+    @container es-rc (min-width: 1100px) {
+      font-size: $fs-base-dk;
+      .es-section__title {
+        font-size: $fs-title-dk-large;
+      }
+      .es-section__subtitle {
+        font-size: $fs-subtitle-dk;
       }
     }
   }
@@ -658,6 +670,44 @@ html {
           top: 12%;
           left: unset;
           right: 7%;
+        }
+      }
+    }
+  }
+
+  .es-hyalu-refill {
+    .es-snowflake {
+      &--1 {
+        width: 40px;
+        top: -76%;
+        right: 8%;
+      }
+      &--2 {
+        width: 100px;
+        top: 8%;
+        left: 6%;
+      }
+      &--3 {
+        top: 63%;
+        right: -1%;
+      }
+    }
+    @container es-rc (min-width: 450px) {
+      .es-snowflake {
+        &--2 {
+          top: -25%;
+        }
+      }
+    }
+    @container es-rc (min-width: 720px) {
+      .es-snowflake {
+        &--1 {
+          top: 3%;
+          right: -154%;
+        }
+        &--2 {
+          top: 5%;
+          left: 63%;
         }
       }
     }

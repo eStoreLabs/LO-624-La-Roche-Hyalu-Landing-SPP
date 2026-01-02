@@ -452,27 +452,28 @@ html {
     gap: 24px;
   }
   #es-rc #es-rc-content .es-section__packshot {
-    max-width: 250px;
+    max-width: 200px;
   }
   #es-rc #es-rc-content .es-section__picture {
     max-width: 200px;
     margin: auto;
   }
 }
-@container es-rc (min-width: 1100px) {
-  #es-rc #es-rc-content .es-section {
-    font-size: 20px;
-  }
-  #es-rc #es-rc-content .es-section__title {
-    font-size: 52px;
-  }
-  #es-rc #es-rc-content .es-section__subtitle {
-    font-size: 32px;
-  }
-}
 @container es-rc (min-width: 720px) {
   #es-rc #es-rc-content .es-grid .es-section {
     background: linear-gradient(159deg, rgb(171, 212, 224) 0%, rgb(202, 227, 235) 50%, rgb(231, 241, 244) 100%);
+  }
+}
+@container es-rc (min-width: 880px) {
+  #es-rc #es-rc-content .es-grid .es-section {
+    margin-block: unset;
+  }
+}
+@container es-rc (min-width: 880px ) {
+  #es-rc #es-rc-content .es-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
   }
 }
 #es-rc #es-rc-content .es-hyalu-serum {
@@ -519,6 +520,7 @@ html {
 @container es-rc (min-width: 720px) {
   #es-rc #es-rc-content .es-hyalu-serum {
     position: relative;
+    justify-content: flex-start;
   }
   #es-rc #es-rc-content .es-hyalu-serum .es-section__packshot {
     position: static;
@@ -537,6 +539,17 @@ html {
   }
   #es-rc #es-rc-content .es-hyalu-serum .es-snowflake--3 {
     left: 0%;
+  }
+}
+@container es-rc (min-width: 1100px) {
+  #es-rc #es-rc-content .es-hyalu-serum {
+    font-size: 20px;
+  }
+  #es-rc #es-rc-content .es-hyalu-serum .es-section__title {
+    font-size: 52px;
+  }
+  #es-rc #es-rc-content .es-hyalu-serum .es-section__subtitle {
+    font-size: 32px;
   }
 }
 #es-rc #es-rc-content .es-hyalu-krem .es-snowflake {
@@ -582,6 +595,35 @@ html {
     top: 12%;
     left: unset;
     right: 7%;
+  }
+}
+#es-rc #es-rc-content .es-hyalu-refill .es-snowflake--1 {
+  width: 40px;
+  top: -76%;
+  right: 8%;
+}
+#es-rc #es-rc-content .es-hyalu-refill .es-snowflake--2 {
+  width: 100px;
+  top: 8%;
+  left: 6%;
+}
+#es-rc #es-rc-content .es-hyalu-refill .es-snowflake--3 {
+  top: 63%;
+  right: -1%;
+}
+@container es-rc (min-width: 450px) {
+  #es-rc #es-rc-content .es-hyalu-refill .es-snowflake--2 {
+    top: -25%;
+  }
+}
+@container es-rc (min-width: 720px) {
+  #es-rc #es-rc-content .es-hyalu-refill .es-snowflake--1 {
+    top: 3%;
+    right: -154%;
+  }
+  #es-rc #es-rc-content .es-hyalu-refill .es-snowflake--2 {
+    top: 5%;
+    left: 63%;
   }
 }
 @media (prefers-reduced-motion: reduce) {
