@@ -10,10 +10,14 @@ html {
   color: #0a4d67;
   background: #fff;
   background-color: #ffffff;
-  max-width: 1300px;
   margin: auto;
   container: es-rc/inline-size;
   /* Animations */
+}
+@media (min-width: 1440px) {
+  #es-rc #es-rc-content {
+    max-width: 1300px;
+  }
 }
 #es-rc #es-rc-content ::-moz-selection {
   background-color: #00adee;
@@ -1064,4 +1068,4 @@ html {
     transform: rotate(360deg);
     opacity: 0.4;
   }
-}/*# sourceMappingURL=styles.css.map */
+}

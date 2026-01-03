@@ -1,18 +1,28 @@
-<!DOCTYPE html>
-<html lang="pl">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
     <title>La Roche Posay Zimowe S.O.S dla skóry</title>
     <!-- Local font imports -->
     <style>
         @font-face {
             font-family: 'Locator Black';
-            src: url('./fonts/Locator_Black.woff2') format('woff2'),
-                url('./fonts/Locator_Black.woff') format('woff');
+            src: url('{{base_url}}la-roche/fonts/Locator_Black.woff2') format('woff2'),
+                url('{{base_url}}la-roche/fonts/Locator_Black.woff') format('woff');
             font-weight: 900;
             font-style: normal;
+        }
+
+        .breadcrumbs {
+            display: none
+        }
+
+        main#maincontent {
+            margin-top: 0
+        }
+
+        .columns div.column.main {
+            padding-bottom: 0
         }
     </style>
 
@@ -20,15 +30,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./styles/styles.css">
-</head>
+    <link rel="stylesheet" href="{{base_url}}la-roche/style/styles.min.css">
 
-<body>
+
+
     <div id="es-rc">
         <div id="es-rc-content">
             <div class="es-kv">
                 <div class="es-kv__logo-wrapper">
-                    <img src="./images/logo-la-roche-posay-white.png" alt="La Roche Posay Logo" class="es-kv__logo-img">
+                    <img src="{{base_url}}la-roche/images/logo-la-roche-posay-white.png" alt="La Roche Posay Logo" class="es-kv__logo-img">
                 </div>
                 <div class="es-kv__headline-wrapper">
                     <p class="es-kv__title">Zimowe S.O.S. dla&nbsp;skóry</p>
@@ -36,26 +46,26 @@
                     <a class="es-kv__CTA" href="#hyalu-b5-suractivated-serum">Sprawdź</a>
                 </div>
                 <div class="es-kv__packs-wrapper">
-                    <img class="es-kv__packs-img" src="./images/kv-packs.png" alt="La Roche Posay Hyalu Zestawy">
+                    <img class="es-kv__packs-img" src="{{base_url}}la-roche/images/kv-packs.png" alt="La Roche Posay Hyalu Zestawy">
                     <p class="es-kv__packs-text es-kv__packs__cialo">Ciało</p>
                     <p class="es-kv__packs-text es-kv__packs__twarz">Twarz</p>
                 </div>
-                <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
-                <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
-                <img class="es-snowflake es-snowflake--3" src="./images/snowflake.png" alt="">
-                <img class="es-snowflake es-snowflake--4" src="./images/snowflake.png" alt="">
+                <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                <img class="es-snowflake es-snowflake--3" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                <img class="es-snowflake es-snowflake--4" src="{{base_url}}la-roche/images/snowflake.png" alt="">
             </div>
 
             <!-- insert SPP product carousel here -->
 
             <div class="es-section es-hyalu-serum" id="hyalu-b5-suractivated-serum">
                 <div class="es-section__packshot es-desktop">
-                    <img class="es-section__picture" src="./images/hyalu-b5-serum.png"
+                    <img class="es-section__picture" src="{{base_url}}la-roche/images/hyalu-b5-serum.png"
                         alt="La Roche Posay Hyalu B5 Suractivated Serum">
 
-                    <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
-                    <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
-                    <img class="es-snowflake es-snowflake--3" src="./images/snowflake.png" alt="">
+                    <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                    <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                    <img class="es-snowflake es-snowflake--3" src="{{base_url}}la-roche/images/snowflake.png" alt="">
                 </div>
 
                 <div class="es-section__desktop-wrapper">
@@ -79,12 +89,12 @@
                                 teraz</a>
                         </div>
                         <div class="es-section__packshot es-mobile">
-                            <img class="es-section__picture" src="./images/hyalu-b5-serum-mobile.png"
+                            <img class="es-section__picture" src="{{base_url}}la-roche/images/hyalu-b5-serum-mobile.png"
                                 alt="La Roche Posay Hyalu B5 Suractivated Serum">
 
-                            <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
-                            <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
-                            <img class="es-snowflake es-snowflake--3" src="./images/snowflake.png" alt="">
+                            <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                            <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                            <img class="es-snowflake es-snowflake--3" src="{{base_url}}la-roche/images/snowflake.png" alt="">
                         </div>
 
                     </div>
@@ -96,11 +106,11 @@
 
                 <div class="es-section es-hyalu-krem">
                     <div class="es-section__packshot es-desktop">
-                        <img class="es-section__picture" src="./images/hyalu-b5-creme.png"
+                        <img class="es-section__picture" src="{{base_url}}la-roche/images/hyalu-b5-creme.png"
                             alt="La Roche Posay Hyalu B5 Suractivated Serum">
 
-                        <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
-                        <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
+                        <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                        <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
                     </div>
 
                     <div class="es-section__desktop-wrapper">
@@ -121,11 +131,11 @@
                                     teraz</a>
                             </div>
                             <div class="es-section__packshot es-mobile">
-                                <img class="es-section__picture" src="./images/hyalu-b5-creme-mobile.png"
+                                <img class="es-section__picture" src="{{base_url}}la-roche/images/hyalu-b5-creme-mobile.png"
                                     alt="La Roche Posay Hyalu B5 Suractivated Serum">
 
-                                <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
-                                <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -133,11 +143,11 @@
 
                 <div class="es-section es-hyalu-refill">
                     <div class="es-section__packshot es-desktop">
-                        <img class="es-section__picture" src="./images/hyalu-b5-creme-refill.png"
+                        <img class="es-section__picture" src="{{base_url}}la-roche/images/hyalu-b5-creme-refill.png"
                             alt="La Roche Posay Hyalu B5 Krem Ujędrniający Refill">
 
-                        <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
-                        <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
+                        <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                        <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
                     </div>
 
                     <div class="es-section__desktop-wrapper">
@@ -159,12 +169,12 @@
                                     teraz</a>
                             </div>
                             <div class="es-section__packshot es-mobile">
-                                <img class="es-section__picture" src="./images/hyalu-b5-creme-refill-mobile.png"
+                                <img class="es-section__picture" src="{{base_url}}la-roche/images/hyalu-b5-creme-refill-mobile.png"
                                     alt="La Roche Posay Hyalu B5 Suractivated Serum">
 
-                                <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
-                                <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
-                                <img class="es-snowflake es-snowflake--3" src="./images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--3" src="{{base_url}}la-roche/images/snowflake.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -172,14 +182,14 @@
 
                 <div class="es-section es-hyalu-gel">
                     <div class="es-section__packshot es-desktop">
-                        <img class="es-section__picture" src="./images/hyalu-b5-gel-pack.png"
+                        <img class="es-section__picture" src="{{base_url}}la-roche/images/hyalu-b5-gel-pack.png"
                             alt="Opakowanie La Roche Posay Hyalu B5 Hydro-Żel do Twarzy">
-                        <img class="es-hyalu-gel__texture" src="./images/hyalu-b5-gel-texture.png" alt="">
+                        <img class="es-hyalu-gel__texture" src="{{base_url}}la-roche/images/hyalu-b5-gel-texture.png" alt="">
 
-                        <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
-                        <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
-                        <img class="es-snowflake es-snowflake--3" src="./images/snowflake.png" alt="">
-                        <img class="es-snowflake es-snowflake--4" src="./images/snowflake.png" alt="">
+                        <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                        <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                        <img class="es-snowflake es-snowflake--3" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                        <img class="es-snowflake es-snowflake--4" src="{{base_url}}la-roche/images/snowflake.png" alt="">
                     </div>
 
                     <div class="es-section__desktop-wrapper">
@@ -201,14 +211,14 @@
                                     teraz</a>
                             </div>
                             <div class="es-section__packshot es-mobile">
-                                <img class="es-section__picture" src="./images/hyalu-b5-gel-pack.png"
+                                <img class="es-section__picture" src="{{base_url}}la-roche/images/hyalu-b5-gel-pack.png"
                                     alt="Opakowanie La Roche Posay Hyalu B5 Hydro-Żel do Twarzy">
-                                <img class="es-hyalu-gel__texture" src="./images/hyalu-b5-gel-texture-mobile.png"
+                                <img class="es-hyalu-gel__texture" src="{{base_url}}la-roche/images/hyalu-b5-gel-texture-mobile.png"
                                     alt="">
-                                <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
-                                <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
-                                <img class="es-snowflake es-snowflake--3" src="./images/snowflake.png" alt="">
-                                <img class="es-snowflake es-snowflake--4" src="./images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--3" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--4" src="{{base_url}}la-roche/images/snowflake.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -216,11 +226,11 @@
 
                 <div class="es-section es-toleriane">
                     <div class="es-section__packshot es-desktop">
-                        <img class="es-section__picture" src="./images/toleriane.png"
+                        <img class="es-section__picture" src="{{base_url}}la-roche/images/toleriane.png"
                             alt="Opakowanie La Roche Posay Toleriane Sensitive">
 
-                        <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
-                        <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
+                        <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                        <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
 
                     </div>
 
@@ -241,11 +251,11 @@
                                     teraz</a>
                             </div>
                             <div class="es-section__packshot es-mobile">
-                                <img class="es-section__picture" src="./images/toleriane-mobile.png"
+                                <img class="es-section__picture" src="{{base_url}}la-roche/images/toleriane-mobile.png"
                                     alt="Opakowanie La Roche Posay Toleriane Sensitive">
 
-                                <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
-                                <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -253,12 +263,12 @@
 
                 <div class="es-section es-cicaplast">
                     <div class="es-section__packshot es-desktop">
-                        <img class="es-section__picture" src="./images/cicaplast.png"
+                        <img class="es-section__picture" src="{{base_url}}la-roche/images/cicaplast.png"
                             alt="Opakowanie La Roche Posay Cicaplast Baume B5+">
 
-                        <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
-                        <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
-                        <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
+                        <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                        <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                        <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
 
                     </div>
 
@@ -279,13 +289,13 @@
                                     teraz</a>
                             </div>
                             <div class="es-section__packshot es-mobile">
-                                <img class="es-section__picture" src="./images/cicaplast-pack.png"
+                                <img class="es-section__picture" src="{{base_url}}la-roche/images/cicaplast-pack.png"
                                     alt="Opakowanie La Roche Posay Cicaplast Baume B5+">
-                                <img class="es-cicaplast__texture" src="./images/cicaplast-texture.png" alt="">
+                                <img class="es-cicaplast__texture" src="{{base_url}}la-roche/images/cicaplast-texture.png" alt="">
 
-                                <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
-                                <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
-                                <img class="es-snowflake es-snowflake--3" src="./images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--3" src="{{base_url}}la-roche/images/snowflake.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -293,10 +303,10 @@
 
                 <div class="es-section es-lipikar">
                     <div class="es-section__packshot es-desktop">
-                        <img class="es-section__picture" src="./images/lipikar.png"
+                        <img class="es-section__picture" src="{{base_url}}la-roche/images/lipikar.png"
                             alt="Opakowanie La Roche Posay Lipikar Baume AP+M">
-                        <img class="es-lipikar__texture" src="./images/lipikar-texture.png" alt="">
-                        <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
+                        <img class="es-lipikar__texture" src="{{base_url}}la-roche/images/lipikar-texture.png" alt="">
+                        <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
 
 
                     </div>
@@ -318,13 +328,13 @@
                                     teraz</a>
                             </div>
                             <div class="es-section__packshot es-mobile">
-                                <img class="es-section__picture" src="./images/lipikar.png"
+                                <img class="es-section__picture" src="{{base_url}}la-roche/images/lipikar.png"
                                     alt="Opakowanie La Roche Posay Cicaplast Baume B5+">
-                                <img class="es-lipikar__texture" src="./images/lipikar-texture-mobile.png" alt="">
+                                <img class="es-lipikar__texture" src="{{base_url}}la-roche/images/lipikar-texture-mobile.png" alt="">
 
-                                <img class="es-snowflake es-snowflake--1" src="./images/snowflake.png" alt="">
-                                <img class="es-snowflake es-snowflake--2" src="./images/snowflake.png" alt="">
-                                <img class="es-snowflake es-snowflake--3" src="./images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--1" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--2" src="{{base_url}}la-roche/images/snowflake.png" alt="">
+                                <img class="es-snowflake es-snowflake--3" src="{{base_url}}la-roche/images/snowflake.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -333,6 +343,5 @@
             </div>
         </div>
     </div>
-</body>
 
-</html>
+
