@@ -909,6 +909,103 @@ html {
     display: none;
   }
 }
+#es-rc #es-rc-content .es-lipikar {
+  padding-bottom: 0;
+}
+#es-rc #es-rc-content .es-lipikar .es-section__packshot {
+  margin-top: -92%;
+  position: relative;
+  z-index: 1;
+}
+#es-rc #es-rc-content .es-lipikar .es-section__picture {
+  max-width: 130px;
+}
+#es-rc #es-rc-content .es-lipikar .es-section__list {
+  width: 60%;
+}
+#es-rc #es-rc-content .es-lipikar__texture {
+  position: absolute;
+  position: absolute;
+  bottom: -6%;
+  left: 41%;
+  z-index: -1;
+  width: 54%;
+}
+#es-rc #es-rc-content .es-lipikar .es-snowflake--1 {
+  top: 67%;
+  left: 9%;
+}
+#es-rc #es-rc-content .es-lipikar .es-snowflake--2 {
+  top: 11%;
+  left: 49%;
+}
+#es-rc #es-rc-content .es-lipikar .es-snowflake--3 {
+  bottom: 8%;
+  left: 49%;
+  width: 40px;
+  z-index: -2;
+}
+@container es-rc (max-width: 489px) {
+  #es-rc #es-rc-content .es-lipikar .es-section__subtitle {
+    width: 56%;
+    text-wrap: balance;
+  }
+}
+@container es-rc (min-width: 360px) {
+  #es-rc #es-rc-content .es-lipikar .es-section__list {
+    width: 60%;
+  }
+  #es-rc #es-rc-content .es-lipikar .es-section__packshot {
+    margin-top: -85%;
+  }
+}
+@container es-rc (min-width: 450px) {
+  #es-rc #es-rc-content .es-lipikar__texture {
+    left: -68%;
+    width: 168%;
+  }
+  #es-rc #es-rc-content .es-lipikar .es-section__packshot {
+    margin-top: unset;
+  }
+  #es-rc #es-rc-content .es-lipikar .es-section__picture {
+    max-width: 150px;
+  }
+  #es-rc #es-rc-content .es-lipikar .es-section__list {
+    width: 75%;
+  }
+  #es-rc #es-rc-content .es-lipikar .es-snowflake--1 {
+    top: 62%;
+    left: -208%;
+    width: 80px;
+    z-index: -2;
+  }
+  #es-rc #es-rc-content .es-lipikar .es-snowflake--2 {
+    top: 11%;
+    left: -29%;
+  }
+  #es-rc #es-rc-content .es-lipikar .es-snowflake--3 {
+    bottom: 9%;
+    left: -65%;
+  }
+}
+@container es-rc (min-width: 720px) {
+  #es-rc #es-rc-content .es-lipikar .es-section__picture {
+    max-width: 120px;
+    margin: auto;
+  }
+  #es-rc #es-rc-content .es-lipikar .es-section__list {
+    width: 100%;
+  }
+  #es-rc #es-rc-content .es-lipikar__texture {
+    width: 85%;
+    max-width: 210px;
+    left: 25%;
+  }
+  #es-rc #es-rc-content .es-lipikar .es-snowflake--1 {
+    top: 11%;
+    left: 3%;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   #es-rc #es-rc-content * {
     animation-duration: 0.01ms !important;
