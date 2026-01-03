@@ -399,6 +399,7 @@ html {
       font-weight: $fw-black;
       margin-bottom: $px-M;
       text-transform: uppercase;
+      text-wrap: balance;
       &--span {
         font-size: $fs-subtitle;
         display: block;
@@ -902,6 +903,9 @@ html {
         max-width: 250px;
         margin: auto;
       }
+      .es-section__list {
+        width: 100%;
+      }
       .es-snowflake {
         &--1 {
           bottom: 15%;
@@ -916,6 +920,110 @@ html {
     }
   }
 
+  .es-cicaplast {
+    .es-section__packshot {
+      margin-top: -92%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .es-section__picture {
+      max-width: 130px;
+    }
+    .es-section__list {
+      width: 50%;
+    }
+    &__texture {
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+      z-index: -1;
+      width: 75%;
+    }
+    .es-snowflake {
+      &--1 {
+        top: 78%;
+        left: 9%;
+        width: 60px;
+      }
+      &--2 {
+        top: -23%;
+        right: 1%;
+      }
+      &--3 {
+        bottom: 24%;
+        right: 0%;
+        width: 40px;
+      }
+    }
+    @container es-rc (max-width: 489px) {
+      .es-section__subtitle {
+        width: 56%;
+        text-wrap: balance;
+      }
+    }
+    @container es-rc (min-width: 380px) {
+      .es-section__list {
+        width: 60%;
+      }
+      .es-section__picture {
+        max-width: 150px;
+      }
+      .es-section__packshot {
+        margin-top: -65%;
+      }
+    }
+    @container es-rc (min-width: 450px) {
+      &__texture {
+        left: -68%;
+        width: 168%;
+      }
+      .es-section__packshot {
+        margin-top: unset;
+      }
+      .es-section__list {
+        width: 75%;
+      }
+      .es-snowflake {
+        &--1 {
+          top: 73%;
+          left: -102%;
+          width: 80px;
+          z-index: -2;
+        }
+        &--2 {
+          top: -18%;
+        }
+        &--3 {
+          bottom: 22%;
+          right: -6%;
+          width: 60px;
+        }
+      }
+    }
+    @container es-rc (min-width: 720px) {
+      .es-section__picture {
+        max-width: 190px;
+        margin: auto;
+      }
+      .es-section__list {
+        width: 100%;
+      }
+      .es-snowflake {
+        &--1 {
+          top: 38%;
+          left: -4%;
+        }
+        &--2 {
+          top: 5%;
+          right: 4%;
+        }
+        &--3 {
+          display: none;
+        }
+      }
+    }
+  }
   // accessibility improvement for animations
   @media (prefers-reduced-motion: reduce) {
     * {
