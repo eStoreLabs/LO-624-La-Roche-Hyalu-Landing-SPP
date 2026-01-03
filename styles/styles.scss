@@ -845,6 +845,77 @@ html {
     }
   }
 
+  .es-toleriane {
+    .es-snowflake {
+      &--1 {
+        bottom: 4%;
+        left: 10%;
+        width: 110px;
+      }
+      &--2 {
+        bottom: 20%;
+        width: 60px;
+        right: 6%;
+      }
+    }
+    .es-section__packshot {
+      margin-top: -92%;
+    }
+    .es-section__picture {
+      max-width: 160px;
+      margin-right: -16px;
+    }
+    .es-section__list {
+      width: 50%;
+    }
+    @container es-rc (min-width: 380px) and (max-width: 489px) {
+      .es-section__subtitle {
+        width: 60%;
+      }
+    }
+    @container es-rc (min-width: 450px) {
+      .es-section__list {
+        width: 75%;
+      }
+
+      .es-section__picture {
+        max-width: 200px;
+        margin-right: unset;
+      }
+      .es-snowflake {
+        &--1 {
+          bottom: -2%;
+          left: -44%;
+        }
+      }
+    }
+    @container es-rc (min-width: 490px) {
+      .es-section__packshot {
+        margin-top: -11%;
+      }
+    }
+    @container es-rc (min-width: 720px) {
+      .es-section__packshot {
+        margin-top: unset;
+      }
+      .es-section__picture {
+        max-width: 250px;
+        margin: auto;
+      }
+      .es-snowflake {
+        &--1 {
+          bottom: 15%;
+          left: 62%;
+        }
+        &--2 {
+          bottom: 42%;
+          width: 70px;
+          right: 76%;
+        }
+      }
+    }
+  }
+
   // accessibility improvement for animations
   @media (prefers-reduced-motion: reduce) {
     * {
