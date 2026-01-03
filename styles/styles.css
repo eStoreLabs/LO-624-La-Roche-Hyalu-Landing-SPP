@@ -311,6 +311,7 @@ html {
   padding: 16px;
   background: linear-gradient(159deg, rgb(231, 241, 244) 0%, rgb(202, 227, 235) 50%, rgb(171, 212, 224) 100%);
   margin-block: 8px;
+  overflow: hidden;
 }
 #es-rc #es-rc-content .es-section .es-desktop {
   display: none;
@@ -335,8 +336,14 @@ html {
   margin-bottom: 16px;
   text-wrap: balance;
 }
+#es-rc #es-rc-content .es-section__description {
+  position: relative;
+  z-index: 1;
+}
 #es-rc #es-rc-content .es-section__list {
   margin-block: 24px;
+  position: relative;
+  z-index: 2;
 }
 #es-rc #es-rc-content .es-section__list ul {
   padding-inline-start: 20px;
@@ -393,6 +400,17 @@ html {
   opacity: 0.6;
   animation: snowflake-3 28s linear infinite;
 }
+#es-rc #es-rc-content .es-section .es-snowflake--4 {
+  width: 50px;
+  z-index: -1;
+  opacity: 0.4;
+  animation: snowflake-4 22s linear infinite reverse;
+}
+@container es-rc (max-width: 449px) {
+  #es-rc #es-rc-content .es-section__packshot {
+    margin-top: -18%;
+  }
+}
 @container es-rc (min-width: 450px) {
   #es-rc #es-rc-content .es-section__description {
     display: flex;
@@ -406,8 +424,8 @@ html {
   }
 }
 @container es-rc (min-width: 450px) and (max-width: 550px) {
-  #es-rc #es-rc-content .es-section__description {
-    align-items: end;
+  #es-rc #es-rc-content .es-section__packshot {
+    align-self: end;
   }
 }
 @container es-rc (min-width: 720px) {
@@ -599,12 +617,12 @@ html {
 }
 #es-rc #es-rc-content .es-hyalu-refill .es-snowflake--1 {
   width: 40px;
-  top: -76%;
+  top: -47%;
   right: 8%;
 }
 #es-rc #es-rc-content .es-hyalu-refill .es-snowflake--2 {
   width: 100px;
-  top: 8%;
+  top: 29%;
   left: 6%;
 }
 #es-rc #es-rc-content .es-hyalu-refill .es-snowflake--3 {
@@ -624,6 +642,111 @@ html {
   #es-rc #es-rc-content .es-hyalu-refill .es-snowflake--2 {
     top: 5%;
     left: 63%;
+  }
+}
+#es-rc #es-rc-content .es-hyalu-gel .es-section__packshot {
+  margin-top: -92%;
+  position: relative;
+}
+#es-rc #es-rc-content .es-hyalu-gel .es-section__picture {
+  max-width: 150px;
+}
+#es-rc #es-rc-content .es-hyalu-gel .es-section__list {
+  width: 50%;
+}
+#es-rc #es-rc-content .es-hyalu-gel__texture {
+  position: absolute;
+  width: 71%;
+  height: 100%;
+  bottom: -16px;
+  right: -16px;
+  z-index: -1;
+}
+#es-rc #es-rc-content .es-hyalu-gel .es-snowflake--1 {
+  top: -24%;
+  left: 68%;
+  width: 90px;
+}
+#es-rc #es-rc-content .es-hyalu-gel .es-snowflake--2 {
+  bottom: -4%;
+  left: 4%;
+}
+#es-rc #es-rc-content .es-hyalu-gel .es-snowflake--3 {
+  top: 47%;
+  left: 39%;
+  width: 50px;
+  z-index: -2;
+}
+#es-rc #es-rc-content .es-hyalu-gel .es-snowflake--4 {
+  top: 55%;
+  right: -4%;
+}
+@container es-rc (min-width: 360px) {
+  #es-rc #es-rc-content .es-hyalu-gel .es-section__packshot {
+    margin-top: -80%;
+  }
+}
+@container es-rc (min-width: 450px) {
+  #es-rc #es-rc-content .es-hyalu-gel .es-section__list {
+    width: 75%;
+  }
+  #es-rc #es-rc-content .es-hyalu-gel .es-section__packshot {
+    margin-top: unset;
+  }
+  #es-rc #es-rc-content .es-hyalu-gel__texture--mobile {
+    width: 172%;
+  }
+  #es-rc #es-rc-content .es-hyalu-gel .es-snowflake--1 {
+    top: -20%;
+    left: 15%;
+  }
+  #es-rc #es-rc-content .es-hyalu-gel .es-snowflake--2 {
+    left: -152%;
+  }
+  #es-rc #es-rc-content .es-hyalu-gel .es-snowflake--3 {
+    top: 58%;
+    left: -28%;
+  }
+}
+@container es-rc (min-width: 540px) {
+  #es-rc #es-rc-content .es-hyalu-gel .es-section__list {
+    width: 100%;
+  }
+}
+@container es-rc (min-width: 720px) {
+  #es-rc #es-rc-content .es-hyalu-gel__texture {
+    width: 100%;
+    left: -16px;
+    top: -16px;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+  }
+  #es-rc #es-rc-content .es-hyalu-gel .es-section__picture {
+    margin: auto;
+  }
+  #es-rc #es-rc-content .es-hyalu-gel .es-snowflake--1 {
+    top: 31%;
+    left: 56%;
+    width: 100px;
+  }
+  #es-rc #es-rc-content .es-hyalu-gel .es-snowflake--2 {
+    left: unset;
+    right: -178%;
+    bottom: 4%;
+  }
+  #es-rc #es-rc-content .es-hyalu-gel .es-snowflake--3 {
+    display: none;
+  }
+  #es-rc #es-rc-content .es-hyalu-gel .es-snowflake--4 {
+    top: 13%;
+    right: -154%;
+  }
+}
+@container es-rc (min-width: 880px) {
+  #es-rc #es-rc-content .es-hyalu-gel__texture {
+    width: 166%;
+    top: -36px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -671,5 +794,18 @@ html {
   100% {
     transform: rotate(360deg);
     opacity: 0.6;
+  }
+}
+@keyframes snowflake-4 {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.4;
   }
 }/*# sourceMappingURL=styles.css.map */
