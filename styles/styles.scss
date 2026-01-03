@@ -346,40 +346,6 @@ html {
     }
   }
 
-  // Swiper styles, reset some of the inherent ones
-  .es-slider {
-    .swiper-button-prev:after,
-    .swiper-rtl .swiper-button-next:after,
-    .swiper-button-next:after,
-    .swiper-rtl .swiper-button-next:after {
-      content: "";
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-      width: unset;
-      height: unset;
-      position: static;
-      justify-content: unset;
-      margin: 0;
-      display: unset;
-    }
-    &__buttons {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      &--prev__img,
-      &--next__img {
-        display: block;
-        width: 32px;
-        height: 32px;
-        margin: 0;
-      }
-      &--prev__img {
-        transform: rotate(180deg);
-      }
-    }
-  }
-
   .es-section {
     padding: $px-M;
     background: $gradient-2;
@@ -492,9 +458,14 @@ html {
       }
       &__list {
         width: 95%;
+        margin-bottom: 0;
       }
       &__picture {
         width: 100%;
+        transition: $transition;
+        &:hover {
+          scale: 1.05;
+        }
       }
     }
     @container es-rc (min-width: 450px) and (max-width: 550px) {
@@ -534,10 +505,10 @@ html {
         align-self: center;
       }
       &__picture {
-        margin: unset;
+        margin: auto;
       }
     }
-    @container es-rc (min-width: 980px) {
+    @container es-rc (min-width: 1000px) {
       padding: $px-L;
       gap: $px-L;
       &__packshot {
@@ -548,19 +519,22 @@ html {
         margin: auto;
       }
     }
+    @container es-rc (min-width: 1100px) {
+      gap: $px-XL;
+    }
   }
 
   .es-grid .es-section {
     @container es-rc (min-width: 720px) {
       background: $gradient-2-rv;
     }
-    @container es-rc (min-width: 880px) {
+    @container es-rc (min-width: 1000px) {
       margin-block: unset;
     }
   }
 
   .es-grid {
-    @container es-rc (min-width: 880px ) {
+    @container es-rc (min-width: 1000px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 8px;
@@ -612,6 +586,7 @@ html {
     @container es-rc (min-width: 720px) {
       position: relative;
       justify-content: flex-start;
+      padding-bottom: $px-M;
       .es-section__packshot {
         position: static;
       }
@@ -844,6 +819,13 @@ html {
         top: -36px;
       }
     }
+    @container es-rc (min-width: 960px) {
+      &__texture {
+        width: 166%;
+        height: 123%;
+        top: -26%;
+      }
+    }
   }
 
   .es-toleriane {
@@ -916,6 +898,11 @@ html {
           width: 70px;
           right: 76%;
         }
+      }
+    }
+    @container es-rc (min-width: 1000px) {
+      .es-section__picture {
+        width: auto;
       }
     }
   }
@@ -1126,6 +1113,13 @@ html {
         &--1 {
           top: 11%;
           left: 3%;
+        }
+      }
+    }
+    @container es-rc (min-width: 880px) {
+      .es-snowflake {
+        &--1 {
+          left: 14%;
         }
       }
     }
